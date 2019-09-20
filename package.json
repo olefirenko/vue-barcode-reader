@@ -1,0 +1,28 @@
+{
+  "name": "vue-barcode-reader",
+  "version": "0.0.3",
+  "description": "Vue barcodes and QR codes scanner",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://olefirenko@github.com/olefirenko/vue-barcode-reader.git"
+  },
+  "keywords": [
+    "vue",
+    "barcode",
+    "qrcode",
+    "zxing"
+  ],
+  "author": "olefirenko <dmitriy.olefirenko@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olefirenko/vue-barcode-reader/issues"
+  },
+  "homepage": "https://github.com/olefirenko/vue-barcode-reader#readme",
+  "dependencies": {
+    "@zxing/library": "^0.15.1"
+  }
+}
