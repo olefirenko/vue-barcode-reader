@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { BrowserMultiFormatReader, Exception } from "@zxing/library";
+import { BrowserMultiFormatReader, Exception, BrowserQRCodeReader, DecodeHintType} from "@zxing/library";
 
 export default {
     name: "stream-barcode-reader",
@@ -30,7 +30,8 @@ export default {
             throw new Exception("Media Stream API is not supported");
             return;
         }
-
+        // const a = new BrowserQRCodeReader();
+        // a.decodeFromVideoDevice()
         this.start();
         this.$refs.scanner.oncanplay = event => {
             this.isLoading = false;
