@@ -3,7 +3,8 @@
         <div v-show="!isLoading">
             <video poster="data:image/gif,AAAA" ref="scanner"></video>
             <div class="overlay-element"></div>
-            <div class="laser"></div>
+            <div class="laser"
+                 :style="[{'background-color': laserColor}, {'box-shadow': `0 0 4px ${laserShadow}`}]"></div>
         </div>
     </div>
 </template>
@@ -13,7 +14,16 @@ import { BrowserMultiFormatReader, Exception } from "@zxing/library";
 
 export default {
     name: "stream-barcode-reader",
-
+    props: {
+     laserColor: {
+       type: String,
+       default: "tomato"
+     },
+     laserShadow: {
+       type: String,
+       default: "red"
+     }
+    },
     data() {
         return {
             isLoading: true,
@@ -53,7 +63,13 @@ export default {
                     }
                 }
             );
-        }
+        },
+        stopDecode() {
+          this.codeReader.stopContinuousDecode()
+        },
+        reset() {
+          this.codeReader.reset()
+        },
     }
 };
 </script>
@@ -103,12 +119,10 @@ video {
 .laser {
     width: 60%;
     margin-left: 20%;
-    background-color: tomato;
     height: 1px;
     position: absolute;
     top: 40%;
     z-index: 2;
-    box-shadow: 0 0 4px red;
     -webkit-animation: scanning 2s infinite;
     animation: scanning 2s infinite;
 }
