@@ -27,6 +27,20 @@ Or
 yarn add vue-barcode-reader
 ```
 
+### TypeScript
+
+There are type definitions available for those who work with TypeScript.
+
+```sh
+npm install @types/vue-barcode-reader --save-dev
+```
+
+Or
+
+```sh
+yarn add -D @types/vue-barcode-reader
+```
+
 ## Usage
 
 The Vue Barcode Reader works out of the box by just including it.
