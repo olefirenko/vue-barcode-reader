@@ -9,9 +9,9 @@ A Vue.js set of components to scan (or upload images) barcodes and QR codes.
 
 ## Demo
 
-You can test in codesandbox demo site.
+You can test in codesandbox demo site https://codesandbox.io/s/vue-barcode-reader-demo-guj3f
 
-https://codesandbox.io/s/vue-barcode-reader-demo-guj3f
+Or you can check the library in action on the website [parceltrackingapp.com](https://parceltrackingapp.com/en).
 
 ## Installation
 
@@ -26,6 +26,10 @@ Or
 ```sh
 yarn add vue-barcode-reader
 ```
+
+### Vue 2.0 support
+
+For Vue 2.0 compatible version please use the `vue-barcode-reader@0.0.3`.
 
 ### TypeScript
 
