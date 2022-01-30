@@ -1,4 +1,4 @@
-import ImageBarcodeReader from "./components/ImageBarcodeReader";
-import StreamBarcodeReader from "./components/StreamBarcodeReader";
+import ImageBarcodeReader from "./components/ImageBarcodeReader.vue";
+import StreamBarcodeReader from "./components/StreamBarcodeReader.vue";
 
 export { ImageBarcodeReader, StreamBarcodeReader };
