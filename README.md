@@ -4,12 +4,12 @@ A Vue.js set of components to scan (or upload images) barcodes and QR codes.
 
 ## Benefits
 
-* Can scan both barcodes and QR codes
-* Uses [ZXing](https://github.com/zxing-js/library) ("zebra crossing"), an open-source, multi-format 1D/2D barcode image processing library implemented in Java, with ports to other languages.
+- Can scan both barcodes and QR codes
+- Uses [ZXing](https://github.com/zxing-js/library) ("zebra crossing"), an open-source, multi-format 1D/2D barcode image processing library implemented in Java, with ports to other languages.
 
 ## Demo
 
-You can test in codesandbox demo site https://codesandbox.io/s/vue-barcode-reader-demo-guj3f
+[Demo repository](https://github.com/olefirenko/vue-barcode-reader-example) | [Codesandbox](https://codesandbox.io/s/vue-barcode-reader-demo-guj3f) | [Vercel](https://vue-barcode-reader-example-2iiz1fhbf-olefirenko.vercel.app/) | [Netlify](https://stupefied-meitner-58f299.netlify.app/)
 
 Or you can check the library in action on the website [parceltrackingapp.com](https://parceltrackingapp.com/en).
 
@@ -58,11 +58,9 @@ import { StreamBarcodeReader } from "vue-barcode-reader";
 ```
 
 In your template you can use this syntax:
+
 ```html
-<StreamBarcodeReader
-    @decode="onDecode"
-    @loaded="onLoaded"
-></StreamBarcodeReader>
+<StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
 ```
 
 ### Scanning from Image
@@ -74,17 +72,11 @@ import { ImageBarcodeReader } from "vue-barcode-reader";
 ```
 
 In your template you can use this syntax:
+
 ```html
-<ImageBarcodeReader
-    @decode="onDecode"
-    @error="onError"
-></ImageBarcodeReader>
+<ImageBarcodeReader @decode="onDecode" @error="onError"></ImageBarcodeReader>
 ```
 
 ```html
-methods: {
-  onDecode (result) {
-    console.log(result)
-  }
-}
+methods: { onDecode (result) { console.log(result) } }
 ```
