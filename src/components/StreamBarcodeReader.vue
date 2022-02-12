@@ -38,7 +38,7 @@ export default {
         };
     },
 
-    beforeUnmount() {
+    beforeDestroy() {
         this.codeReader.reset();
     },
 
