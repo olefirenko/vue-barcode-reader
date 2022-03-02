@@ -1,5 +1,8 @@
 # Vue Barcode and QR code scanner
 
+> ⚠️ Hello everyone! My name is Dmytro and I am from 🇺🇦 Ukraine. People in Ukraine **ARE DYING RIGHT NOW** because of 🇷🇺 Russia Agression! Please help Ukraine. Donate if you can to: [UKRAINE’S DEFENDERS](https://war.ukraine.ua/donate/), [CHARITABLE FOUNDATION "COME BACK ALIVE"](https://savelife.in.ua/en/donate/). Help to stop Russian aggression 🙏! #StandWithUkraine
+> [🇺🇦 IT Army of Ukraine](https://t.me/itarmyofukraine2022)
+
 A Vue.js set of components to scan (or upload images) barcodes and QR codes.
 
 ## Benefits
