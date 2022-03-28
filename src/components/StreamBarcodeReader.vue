@@ -49,7 +49,7 @@ export default {
                 this.$refs.scanner,
                 (result, err) => {
                     if (result) {
-                        this.$emit("decode", result.text);
+                        this.$emit("decode", result.text, result);
                     }
                 }
             );
