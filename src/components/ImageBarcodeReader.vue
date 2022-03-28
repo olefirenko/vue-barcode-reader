@@ -35,7 +35,7 @@ export default {
 
             this.codeReader
                 .decodeFromImage("image")
-                .then(result => this.$emit("decode", result.text))
+                .then(result => this.$emit("decode", result.text, result))
                 .catch(error => this.$emit("error", error));
         }
     }
