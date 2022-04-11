@@ -1,10 +1,15 @@
 <template>
-    <div class="scanner-container">
-        <div v-show="!isLoading">
-            <video poster="data:image/gif,AAAA" ref="scanner"></video>
-            <div class="overlay-element"></div>
-            <div class="laser"></div>
-        </div>
+    <div class="scanner">
+      <div class="scanner-ui" v-show="!isLoading">
+        <button type='button' @click="torchChange(!torch)">Flash</button>
+      </div>
+      <div class="scanner-container">
+          <div v-show="!isLoading">
+              <video poster="data:image/gif,AAAA" ref="scanner"></video>
+              <div class="overlay-element"></div>
+              <div class="laser"></div>
+          </div>
+      </div>
     </div>
 </template>
 
@@ -16,6 +21,7 @@ export default {
 
     data() {
         return {
+            torch: false,
             isLoading: true,
             codeReader: new BrowserMultiFormatReader(),
             isMediaStreamAPISupported:
@@ -44,6 +50,7 @@ export default {
 
     methods: {
         start() {
+          // console.log(this.$refs.scanner)
             this.codeReader.decodeFromVideoDevice(
                 undefined,
                 this.$refs.scanner,
@@ -53,6 +60,15 @@ export default {
                     }
                 }
             );
+            /* setTimeout(() => { document.getElementsByTagName('video')[0]
+            .srcObject.getVideoTracks()[0].applyConstraints({ advanced: [{ torch: true }] }); }, 2000);*/
+
+        },
+        torchChange(value) {
+          alert(value)
+          document.getElementsByTagName('video')[0]
+          .srcObject.getVideoTracks()[0].applyConstraints({ advanced: [{ torch: value }] });
+          this.torch = value;
         }
     }
 };
