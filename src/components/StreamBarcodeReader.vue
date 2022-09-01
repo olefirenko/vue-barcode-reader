@@ -43,7 +43,7 @@ export default {
     },
 
     methods: {
-        start() {
+        async start() {
             // Modern phones often have multipe front/rear cameras.
             // Sometimes special purpose cameras like the wide-angle camera are picked
             // by default. Those are not optimal for scanning QR codes but standard
