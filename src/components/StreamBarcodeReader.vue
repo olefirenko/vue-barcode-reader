@@ -44,8 +44,21 @@ export default {
 
     methods: {
         start() {
+            // Modern phones often have multipe front/rear cameras.
+            // Sometimes special purpose cameras like the wide-angle camera are picked
+            // by default. Those are not optimal for scanning QR codes but standard
+            // media constraints don't allow us to specify which camera we want exactly.
+            // However, explicitly picking the first entry in the list of all videoinput
+            // devices for as the default front camera and the last entry as the default
+            // rear camera seems to be a workaround.
+            let selected_device_id = undefined
+            const devices = await this.codeReader.listVideoInputDevices()
+            if (devices.length > 2) {
+              const selectedCamera = devices[devices.length - 1]
+              selected_device_id = selectedCamera.deviceId
+            }
             this.codeReader.decodeFromVideoDevice(
-                undefined,
+                selected_device_id,
                 this.$refs.scanner,
                 (result, err) => {
                     if (result) {
