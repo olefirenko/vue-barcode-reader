@@ -52,7 +52,7 @@ export default {
       this.$emit("loaded");
     };
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.codeReader.reset();
   },
   methods: {
