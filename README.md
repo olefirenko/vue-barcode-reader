@@ -66,6 +66,20 @@ In your template you can use this syntax:
 <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
 ```
 
+Or this syntax: (if you are using eslint rules)  
+If you want to use torch/flashlight add the prop 'show-torch-btn'  
+If you want to see a list of available cameras on the device add the prop 'show-list-cameras'  
+
+```html
+<stream-barcode-reader
+	show-list-cameras
+	show-torch-btn
+	@decode="(a) => onDecode(a)"
+	@loaded="() => onLoaded()"
+>
+</stream-barcode-reader>
+```
+
 ### Scanning from Image
 
 The component renders to a simple file picker input element. Clicking opens a file dialog. On supporting mobile devices the camera is started to take a picture. The selected images are directly scanned and positive results are indicated by the `decode` event.
