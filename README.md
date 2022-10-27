@@ -1,7 +1,6 @@
 # Vue Barcode and QR code scanner
 
-> ⚠️ Hello everyone! My name is Dmytro and I am from 🇺🇦 Ukraine. People in Ukraine **ARE DYING RIGHT NOW** because of 🇷🇺 Russia Agression! Please help Ukraine. Donate if you can to: [UKRAINE’S DEFENDERS](https://war.ukraine.ua/donate/), [CHARITABLE FOUNDATION "COME BACK ALIVE"](https://savelife.in.ua/en/donate/). Help to stop Russian aggression 🙏! #StandWithUkraine
-> [🇺🇦 IT Army of Ukraine](https://t.me/itarmyofukraine2022)
+[![npm version](https://badgen.net/npm/v/vue-barcode-reader)](https://www.npmjs.com/package/vue-barcode-reader) [![sponsored_by](https://badgen.net/badge/sponsored%20by/%F0%9F%A4%96kopiAI.com/f2a)](https://kopiai.com/?utm_source=npm&utm_medium=badge&utm_campaign=vue_barcode_reader)
 
 A Vue.js set of components to scan (or upload images) barcodes and QR codes.
 
@@ -83,3 +82,19 @@ In your template you can use this syntax:
 ```html
 methods: { onDecode (result) { console.log(result) } }
 ```
+
+## Events
+
+The library emits the following events:
+
+### loaded
+
+When the libraty is loaded and the camera is ready to scan
+
+### decode
+
+When a barcode or QR code is scanned. The result is passed as a parameter to the event handler. The result is the text encoded in the barcode or QR code.
+
+### result
+
+When a barcode or QR code is scanned. The result is passed as a parameter to the event handler. The result is the object with the following properties:
