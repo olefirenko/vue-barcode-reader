@@ -46,7 +46,8 @@ export default {
           this.$emit("decode", result.text);
           this.$emit("result", result);
         }
-      });
+      })
+      .catch(error => this.$emit("error", error));
     },
   },
 };
