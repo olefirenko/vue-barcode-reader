@@ -1,6 +1,6 @@
 {
   "name": "vue-barcode-reader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue barcodes and QR codes scanner",
   "main": "src/index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 # Vue Barcode and QR code scanner
 
-[![npm version](https://badgen.net/npm/v/vue-barcode-reader)](https://www.npmjs.com/package/vue-barcode-reader) [![sponsored_by](https://badgen.net/badge/sponsored%20by/%F0%9F%A4%96kopiAI.com/f2a)](https://kopiai.com/?utm_source=npm&utm_medium=badge&utm_campaign=vue_barcode_reader)
+[![npm version](https://badgen.net/npm/v/vue-barcode-reader)](https://www.npmjs.com/package/vue-barcode-reader) [![sponsored_by](https://badgen.net/badge/sponsored%20by/%F0%9F%A4%96Easy-Peasy.AI/f2a)](https://Easy-Peasy.AI/?utm_source=npm&utm_medium=badge&utm_campaign=vue_barcode_reader)
 
 A Vue.js set of components to scan (or upload images) barcodes and QR codes.
 
