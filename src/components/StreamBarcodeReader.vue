@@ -13,11 +13,16 @@ import { BrowserMultiFormatReader, Exception } from "@zxing/library";
 
 export default {
   name: "stream-barcode-reader",
-
+  props: {
+    codeReader: {
+      required: false,
+      type: Object,
+      default: new BrowserMultiFormatReader()
+    }
+  },
   data() {
     return {
       isLoading: true,
-      codeReader: new BrowserMultiFormatReader(),
       isMediaStreamAPISupported: navigator && navigator.mediaDevices && "enumerateDevices" in navigator.mediaDevices,
     };
   },
