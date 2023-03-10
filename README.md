@@ -55,28 +55,32 @@ The Vue Barcode Reader works out of the box by just including it.
 
 Once a stream from the users camera is loaded, it's displayed and continuously scanned for barcodes. Results are indicated by the decode event.
 
-```js
-import { StreamBarcodeReader } from "vue-barcode-reader";
-```
-
-In your template you can use this syntax:
-
 ```html
-<StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
+<script setup>
+import { StreamBarcodeReader } from 'vue-barcode-reader'
+</script>
+
+<StreamBarcodeReader @decode="onDecode" @loaded="onLoaded" />
+
+<style lang="scss" scoped>
+@import 'vue-barcode-reader/style.css';
+</style>
 ```
 
 ### Scanning from Image
 
 The component renders to a simple file picker input element. Clicking opens a file dialog. On supporting mobile devices the camera is started to take a picture. The selected images are directly scanned and positive results are indicated by the `decode` event.
 
-```js
-import { ImageBarcodeReader } from "vue-barcode-reader";
-```
-
-In your template you can use this syntax:
-
 ```html
-<ImageBarcodeReader @decode="onDecode" @error="onError"></ImageBarcodeReader>
+<script setup>
+import { ImageBarcodeReader } from 'vue-barcode-reader'
+</script>
+
+<ImageBarcodeReader @decode="onDecode" @error="onError" />
+
+<style lang="scss" scoped>
+@import 'vue-barcode-reader/style.css';
+</style>
 ```
 
 ```html
