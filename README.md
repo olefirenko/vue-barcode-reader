@@ -89,7 +89,7 @@ The library emits the following events:
 
 ### loaded
 
-When the libraty is loaded and the camera is ready to scan
+When the library is loaded and the camera is ready to scan
 
 ### decode
 
