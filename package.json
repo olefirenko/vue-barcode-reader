@@ -16,16 +16,9 @@
     "qrcode",
     "zxing"
   ],
-  "author": "olefirenko <dmitriy.olefirenko@gmail.com>",
+  "author": "renanbolsoni",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/olefirenko/vue-barcode-reader/issues"
-  },
-  "homepage": "https://github.com/olefirenko/vue-barcode-reader#readme",
   "dependencies": {
     "@zxing/library": "^0.20.0"
-  },
-  "publishConfig": {
-  "registry": "https://npm.pkg.github.com"
   },
 }
