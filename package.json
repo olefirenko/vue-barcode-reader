@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://olefirenko@github.com/olefirenko/vue-barcode-reader.git"
+    "url": "git+https://github.com/RenanBolsoni/vue-barcode-reader-2.git"
   },
   "keywords": [
     "vue",
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/olefirenko/vue-barcode-reader#readme",
   "dependencies": {
     "@zxing/library": "^0.20.0"
-  }
+  },
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com"
+  },
 }
